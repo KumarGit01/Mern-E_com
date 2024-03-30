@@ -6,7 +6,7 @@ const Listproduct = () => {
 
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:4000/allproducts');
+        const response = await fetch('https://mern-e-com-backend.vercel.app/allproducts');
         const data = await response.json();
         if (data) {
           setProducts(data); // Assuming the fetched data contains an array of products
@@ -26,7 +26,7 @@ const Listproduct = () => {
 
   const removeproduct = async (id)=>{
 
-const response = await fetch('http://localhost:4000/removeproduct',{
+const response = await fetch('https://mern-e-com-backend.vercel.app/removeproduct',{
 method:'POST',
 headers:{
   Accept:'application/json',
