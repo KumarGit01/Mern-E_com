@@ -5,7 +5,7 @@
     ],
     "routes": [
       { "src": "/upload/images/(.*)", "dest": "/upload/images/$1" },
-      { "src": "/(.*)", "dest": "/" }
+      { "src": "/(.*)", "dest": "/index.js" }
     ]
   }
   
