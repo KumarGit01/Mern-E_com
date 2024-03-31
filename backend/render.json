@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "startCommand": "npm start",
+  "startCommand": "node index",
   "env": {
     "NODE_ENV": "production",
     "PORT": 3000
