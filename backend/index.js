@@ -15,11 +15,11 @@ mongoose.connect("mongodb+srv://kik392817:6W5Y2h5dqtOwLiXb@cluster0.dvkxz5v.mong
 
 app.get('/favicon.ico', (req, res) => {
     // Return a 404 Not Found response
-    res.status(404).send('Not Found');
+    res.status(200).send('Not Found');
   });
   app.get('/favicon.png', (req, res) => {
     // Return a 404 Not Found response
-    res.status(404).send('Not Found');
+    res.status(200).send('Not Found');
   });
   
   
