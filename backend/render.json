@@ -1,8 +1,4 @@
 {
-  "buildCommand": "npm run build",
-  "startCommand": "node index",
-  "env": {
-    "NODE_ENV": "production",
-    "PORT": 3000
-  }
+  "buildCommand": "npm install && npm run build",
+  "startCommand": "node index.js"
 }
