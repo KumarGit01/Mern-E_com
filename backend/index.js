@@ -1,4 +1,3 @@
-const port = 4000 ;
 require('dotenv').config();
 
 const express = require('express');
@@ -11,9 +10,6 @@ const cors = require('cors');
 app.use(express.json())
 app.use(cors());
 
-//Database connection with moongodb
-console.log("DB_EMAIL:", process.env.DB_EMAIL);
-console.log("DB_PASS:", process.env.DB_PASS);
 
 mongoose.connect(`mongodb+srv://${process.env.DB_EMAIL}:${process.env.DB_PASS}@cluster0.dvkxz5v.mongodb.net/e-commerce`);
 
@@ -268,7 +264,7 @@ app.post('/getcart',fetchuser,async (req,res)=>{
    res.json(userData.cartData);
 })
 
-app.listen(port,(error)=>{
+app.listen(`${process.env.port}`,(error)=>{
     if(!error){
 console.log("serverr running on the port 4000")
     }

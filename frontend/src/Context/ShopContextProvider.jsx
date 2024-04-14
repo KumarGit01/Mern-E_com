@@ -15,12 +15,12 @@ const ShopContextProvider = (props) => {
 const [cartItems,setCartItems]=useState(getDefaultCart())
 
 useEffect(()=>{
-fetch ('https://mern-e-com-backend.vercel.app/allproducts')
+fetch ('http://localhost:4000/allproducts')
 .then((res)=>res.json())
 .then((data)=>setAll_product(data))
 
 if(localStorage.getItem('auth-token')){
-    fetch('https://mern-e-com-backend.vercel.app/getcart',{
+    fetch('http://localhost:4000/getcart',{
         method:'POST',
         headers:{
             Accept:'application/form-data',
@@ -36,7 +36,7 @@ if(localStorage.getItem('auth-token')){
     setCartItems((prev)=> ({
         ...prev,[itemId]:prev[itemId] + 1 }))
 if(localStorage.getItem('auth-token')){
-fetch ('https://mern-e-com-backend.vercel.app/addtocart',{
+fetch ('http://localhost:4000/addtocart',{
     method:'POST',
     headers:{
         Accept:'application/form-data',
@@ -54,7 +54,7 @@ fetch ('https://mern-e-com-backend.vercel.app/addtocart',{
         ...prev,[itemId]:prev[itemId]- 1 }))
 
         if(localStorage.getItem('auth-token')){
-            fetch ('https://mern-e-com-backend.vercel.app/removefromcart',{
+            fetch ('http://localhost:4000/removefromcart',{
     method:'POST',
     headers:{
         Accept:'application/form-data',
