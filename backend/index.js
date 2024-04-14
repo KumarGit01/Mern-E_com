@@ -1,4 +1,6 @@
 const port = 4000 ;
+require('dotenv').config();
+
 const express = require('express');
 const app = express()
 const mongoose = require("mongoose");
@@ -10,8 +12,10 @@ app.use(express.json())
 app.use(cors());
 
 //Database connection with moongodb
+console.log("DB_EMAIL:", process.env.DB_EMAIL);
+console.log("DB_PASS:", process.env.DB_PASS);
 
-mongoose.connect("mongodb+srv://kik392817:6W5Y2h5dqtOwLiXb@cluster0.dvkxz5v.mongodb.net/e-commerce")
+mongoose.connect(`mongodb+srv://${process.env.DB_EMAIL}:${process.env.DB_PASS}@cluster0.dvkxz5v.mongodb.net/e-commerce`);
 
   
 //API Creation
@@ -237,9 +241,9 @@ res.status(401).send({errors:"please authenticate using valid token"})
 
 //creating endpoint for  adding cartdata
 app.post('/addtocart',fetchuser, async (req,res)=>{
-    console.log("Added",req.body.id);
+    console.log("Added",req.body.itemID);
 
-    let userData =await Users.findOne({_id:req.user.itemID})
+    let userData =await Users.findOne({_id:req.user.id})
 userData.cartData[req.body.itemID] += 1;
 console.log(userData)
 await Users.findOneAndUpdate({_id:req.user.id},{cartData:userData.cartData});

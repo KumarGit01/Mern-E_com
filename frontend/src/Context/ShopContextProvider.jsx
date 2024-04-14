@@ -43,7 +43,7 @@ fetch ('http://localhost:4000/addtocart',{
         'auth-token':`${localStorage.getItem('auth-token')}`,
         'Content-Type':'application/json',
     },
-    body:JSON.stringify({itemID:itemId}),
+    body:JSON.stringify({"itemID":itemId})
 })
     .then((res)=>res.json())
     .then((data)=>console.log(data))
@@ -52,6 +52,7 @@ fetch ('http://localhost:4000/addtocart',{
  const removeFromCart = (itemId)=>{
     setCartItems((prev)=> ({
         ...prev,[itemId]:prev[itemId]- 1 }))
+
         if(localStorage.getItem('auth-token')){
             fetch ('http://localhost:4000/removefromcart',{
     method:'POST',
@@ -60,7 +61,7 @@ fetch ('http://localhost:4000/addtocart',{
         'auth-token':`${localStorage.getItem('auth-token')}`,
         'Content-Type':'application/json',
     },
-    body:JSON.stringify({"itemID ":itemId})
+    body:JSON.stringify({"itemID":itemId})
 })
     .then((res)=>res.json())
     .then((data)=>console.log(data))
