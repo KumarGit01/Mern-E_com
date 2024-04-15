@@ -150,7 +150,7 @@ right: -50px;
     
         .hero-left{
             position: relative;
-            left: 50px;
+            left: 0px;
             top: 180px;
          }
        .hero-right{

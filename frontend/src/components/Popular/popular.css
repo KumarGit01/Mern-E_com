@@ -76,6 +76,8 @@ height: 90vh;
 
 @media(max-width:500px){
     .popular{
+        position: relative;
+        left: -20px;
         height: 90vh;
     }
  

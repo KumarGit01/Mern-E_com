@@ -77,8 +77,10 @@ font-weight: 600;
     }
     .nav-cart-count{
         position: absolute;
-        left: 95px;
-        top: 7px;
+        left: 160px;
+        top: 9px;
+        scale: 1.2;
+
         width:20px;
         height: 20px;
         display: flex;
@@ -339,7 +341,7 @@ left: 90px;
         .cart-logo button{
             position: absolute;
             top: -7px;
-            right: 10px;
+            right: 0px;
         width: 100px;
         background-color: white;
         cursor: pointer;

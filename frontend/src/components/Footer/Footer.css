@@ -71,7 +71,7 @@ gap: 20px;
 @media(max-width:800px){
     .footer{
         position: relative;
-        top: 60px;
+        top: 300px;
         gap: 20px;
         left: -20px;
 
@@ -104,7 +104,7 @@ width: 40px;
 @media(max-width:500px){
     .footer{
         position: relative;
-        top: 60px;
+        top: 900px;
         left: -20px;
         gap: 20px;
 
