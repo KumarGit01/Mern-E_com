@@ -28,7 +28,7 @@ const Addproduct = () => {
         formData.append('product', image); // Make sure the field name matches Multer configuration
 
         try {
-            const response = await fetch('https://mern-e-com-backend.vercel.app/upload', {
+            const response = await fetch('https://backend-server-2.onrender.com/upload', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -41,7 +41,7 @@ const Addproduct = () => {
             if (responseData.success) {
                 product.image = responseData.image_url;
                 console.log(product);
-            await fetch('https://mern-e-com-backend.vercel.app/addproducts',{
+            await fetch('https://backend-server-2.onrender.com/addproducts',{
                 method:'POST',
                 headers:{
                     Accept:'application/json',

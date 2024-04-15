@@ -8,7 +8,11 @@ const multer= require("multer")
 const path = require("path")
 const cors = require('cors');
 app.use(express.json())
-app.use(cors());
+app.use(cors({
+    origin: 'https://backend-server-2.onrender.com', // Replace with your frontend URL
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }));
+  
 
 
 mongoose.connect(`mongodb+srv://${process.env.DB_EMAIL}:${process.env.DB_PASS}@cluster0.dvkxz5v.mongodb.net/e-commerce`);
@@ -32,12 +36,14 @@ const upload = multer({
     storage:storage
 })
 
+
+
 // Creating upload end point
 app.use('/images',express.static('upload/images'))
 app.post("/upload",upload.single('product'), (req,res)=>{
 res.json({
     success:1,
-    image_url:`http://localhost:${port}/images/${req.file.filename}`
+    image_url:`https://backend-server-2.onrender.com/images/${req.file.filename}`
 
 })
 })
@@ -77,6 +83,8 @@ default:true,
     },
 
 })
+
+
 
 app.post('/addproducts',async (req,res)=>{
     let products = await Product.find({});
@@ -263,6 +271,7 @@ app.post('/getcart',fetchuser,async (req,res)=>{
     let userData =await Users.findOne({_id:req.user.id});
    res.json(userData.cartData);
 })
+
 
 app.listen(`${process.env.port}`,(error)=>{
     if(!error){
