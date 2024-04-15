@@ -7,7 +7,7 @@ function Hero() {
   return (
     <div className='hero'>
       <div className="hero-left">
-        <h2>New ARRAVIAlS ONLY</h2>
+        <h2>New Arrivals Only</h2>
         
         <div className='hh1'>
             <div className="hand-hand-icon">

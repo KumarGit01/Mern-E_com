@@ -4,7 +4,7 @@ import logo from '../Assets/logo.png'
 import cart_icon from '../Assets/cart_icon.png'
 import {NavLink,Link} from 'react-router-dom'
 import { ShopContext } from '../../Context/ShopContextProvider';
-import whatsapp_icon from '../Assets/whatsapp_icon.png'
+import whatsapp_icon from '../Assets/menu.png'
 const Navbar = () => {
   const {getTotalItems} = useContext(ShopContext)
   const menuRef = useRef();
@@ -28,7 +28,7 @@ const Navbar = () => {
      <div className='cart-logo'>
      {localStorage.getItem('auth-token') ? <button onClick={()=>{localStorage.removeItem('auth-token'); window.location.replace('/')}}>Logout</button> : 
      <Link to='login'><button>Login</button></Link> }
-  <Link to='cart'> <img src= {cart_icon} alt='img'></img></Link>   
+  <Link to='cart'className='cart'> <img  src= {cart_icon} alt='img'></img></Link>   
       <div className='nav-cart-count'>{getTotalItems()}</div>
      </div>
 

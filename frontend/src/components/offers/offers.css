@@ -215,6 +215,8 @@ background: linear-gradient(180deg,#fde1ff 0%,#e1ffea22 60%);
     }
  
 .offers{
+    position: relative;
+    top: 60px;
 height: 25vh;
 margin-bottom: 50px;
 }

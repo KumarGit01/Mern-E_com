@@ -153,7 +153,11 @@ display: none;
                 position: absolute;
                 left: 34%;
             }
- 
+            .nav-cart-count{
+                position: absolute;
+                left: 160px;
+                top: 6px;
+            }
     }
 
 
@@ -250,100 +254,60 @@ transform: rotate(90deg);
 
 
      /*---------------------------------------------------*/
-     @media(max-width:740px){
-        .nav-dropdown{
-            position: absolute;
-            left: 40%;
-        display: block;
-        width: 30px;
-        rotate:-90deg ;
-        transition: 0.5s;
-           }
-        .nav-menu-visible{
-display: block;
-position: absolute;
-           top: 70px;
-      transition: all .5s;
-        }
-
-        
-        a{
-            text-decoration: none;
-            padding:10px 20px ;
-            color:#626262;
-            font-weight: 500;
-            font-size: 14px;
-        }
-        
-        .cart-logo{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            top:0px ;
-            right: 60px;
-            width: 50px;
-        }
-        .cart-logo button{
-        width: 120px;
-        background-color: white;
+     @media(max-width:800px){
+     
+     .nav-dropdown{
         cursor: pointer;
-        height: 34px;
-        outline: none;
-        border: 1px solid #7a7a7a;
-        border-radius: 75px;
-        color:#515151;
-        font-size: 20px;
-        font-weight: 500;
+        position: absolute;
+        left: 46%;
+    display: block;
+    width: 30px;
+    rotate:0deg ;
+    transition: 0.5s;
+       }
+       .cart-logo button{
+        position: absolute;
+        top: -5px;
+        right: 25px;
+    width: 150px;
+    background-color: white;
+    cursor: pointer;
+    height: 34px;
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    color:#515151;
+    font-size: 20px;
+    font-weight: 500;
+    }
+    .cart-logo img{
+        scale: 1.4;
+        position: absolute;
+        top:0px ;
+        right: -50px;
+        height: 25px;
+        cursor: pointer;
         }
-        .cart-logo img{
-            position: absolute;
-            top:13px ;
-            right: -50px;
-            height: 25px;
-            cursor: pointer;
-            }
-   
-        
-        .nav-logo{
-            position: relative;
-            left: 15px;
-            display:flex ;
-            align-items: center;
-            gap:10px ;
-            height: 50PX;
-        }
-        .nav-logo>p {
-        color: #171717;     
-        font-size: 20px;
-        font-weight: 600;
-            }
-            .menu-bar{
+        .nav-cart-count{
+            scale: 1.2;
                 position: absolute;
-                left: 30%;
-            }
-         
-            
-         
-            .nav-cart-count{
-                position: absolute;
-                left: 90px;
-                top: 6px;
+                left: 125px;
+                top: -14px;
             }
     }
-
-
-
     
      /*---------------------------------------------------*/
      @media(max-width:500px){
-
+.navbar{
+    height: 100px;
+}
           .nav-dropdown{
+            cursor: pointer;
             position: absolute;
-            left: 45%;
+            left: 50%;
         display: block;
         width: 30px;
-        rotate:-90deg ;
+        rotate:90deg ;
         transition: 0.5s;
            }
         .nav-menu-visible{
@@ -373,7 +337,10 @@ left: 90px;
             width: 50px;
         }
         .cart-logo button{
-        width: 120px;
+            position: absolute;
+            top: -7px;
+            right: 10px;
+        width: 100px;
         background-color: white;
         cursor: pointer;
         height: 34px;
@@ -381,14 +348,14 @@ left: 90px;
         border: 1px solid #7a7a7a;
         border-radius: 75px;
         color:#515151;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
         }
         .cart-logo img{
             position: absolute;
-            top:13px ;
-            right: -50px;
-            height: 25px;
+            top:23px ;
+            right: -40px;
+            height: 20px;
             cursor: pointer;
             }
    
@@ -411,8 +378,15 @@ left: 90px;
             
          
             .nav-cart-count{
+            scale: 1.1;
                 position: absolute;
-                left: 90px;
-                top: 6px;
+                left: 80px;
+                top: -16px;
+            }
+            .cart{
+                scale: 1.2;
+                position: absolute;
+                top: -27px;
+                right: 14px;
             }
     }
