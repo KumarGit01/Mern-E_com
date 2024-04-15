@@ -5,7 +5,7 @@ import Items from '../items/Items'
 const Popular = () => {
   const[popular,setPopular]=useState([]);
   useEffect(()=>{
-    fetch ('http://localhost:4000/popularinwomen')
+    fetch ('https://backend-server-2.onrender.com/popularinwomen')
     .then((res)=>res.json())
     .then((data)=>setPopular(data))
     },[])
